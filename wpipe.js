@@ -20,6 +20,8 @@ var infile = argv._[0];
 var outfile = argv._[1];
 var cmd = argv._[2];
 
+// wpipe: watch inf, and every time it changes, transform
+// its contents with cmd and write the result to outf
 function wpipe (inf, outf, c) {
   wb(infile, outfile || '/dev/stdout', function (data) {
     var p = spawn(c);

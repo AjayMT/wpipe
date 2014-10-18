@@ -1,9 +1,11 @@
 
 # wpipe
+[![Build Status](https://travis-ci.org/AjayMT/wpipe.svg)](https://travis-ci.org/AjayMT/wpipe)
+
 Pipe the contents of one file into a command and write the result to another file, and do this every time the input file changes. Kind of like an extremely simple CLI for [watchbuild](http://npmjs.org/watchbuild).
 
 ## Installation
-```
+```sh
 $ npm install -g wpipe
 ```
 
@@ -12,7 +14,7 @@ $ npm install -g wpipe
 wpipe <in> <out> <cmd>
 ```
 
-Where <in> is a glob pattern or file path of the file to watch, <out> is the output file, and <cmd> is the command that is used to transform file contents.
+Where `<in>` is a glob pattern or file path of the file to watch, `<out>` is the output file, and `<cmd>` is the command that is used to transform file contents.
 
 Basically, all that wpipe does is execute something like this:
 
@@ -21,7 +23,7 @@ $ echo <in> | <cmd> > <out> # except you replace <in>, <out> & <cmd>
                             # with actual values
 ```
 
-Every time <in> changes.
+Every time `<in>` changes.
 
 ## API
 ### wpipe(infile, outfile, cmd)
