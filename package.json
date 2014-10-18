@@ -1,0 +1,20 @@
+
+{
+  "name": "wpipe",
+  "version": "0.0.1",
+  "description": "watch files and execute commands",
+  "dependencies": {
+    "watchbuild": "0.0.21",
+    "minimist": "1.1.0"
+  },
+  "main": "wpipe.js",
+  "bin": {
+    "wpipe": "wpipe.js"
+  },
+  "author": "Ajay MT <ajay.tatachar@gmail.com> (http://ajaymt.github.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/AjayMT/wpipe.git"
+  }
+}
