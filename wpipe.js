@@ -5,6 +5,7 @@
 var spawn = require('child_process').spawn;
 
 var wb = require('watchbuild');
+var duplexer = require('duplexer2');
 var argv = require('minimist')(process.argv.slice(2));
 
 var usage = 'Usage: wpipe <in> <out> <cmd>\n\n'
@@ -23,14 +24,9 @@ var cmd = argv._[2];
 // wpipe: watch inf, and every time it changes, transform
 // its contents with cmd and write the result to outf
 function wpipe (inf, outf, c) {
-  wb(inf, outf, function (data) {
-    var p = spawn(c);
+  var cp = spawn(c);
 
-    p.stdin.write(data);
-    p.stdin.end();
-
-    return p.stdout;
-  });
+  wb(inf, outf, duplexer(c.stdin, c.stdout));
 }
 
 module.exports = wpipe;
