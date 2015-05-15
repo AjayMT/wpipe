@@ -25,8 +25,10 @@ var cmd = argv._[2];
 // its contents with cmd and write the result to outf
 function wpipe (inf, outf, c) {
   var cp = spawn(c);
+  var files = {};
 
-  wb(inf, outf, duplexer(c.stdin, c.stdout));
+  files[inf] = outf;
+  wb(files, duplexer(c.stdin, c.stdout));
 }
 
 module.exports = wpipe;
