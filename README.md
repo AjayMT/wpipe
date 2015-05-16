@@ -19,8 +19,8 @@ Where `<in>` is a glob pattern or file path of the file to watch, `<out>` is the
 Basically, all that wpipe does is execute something like this:
 
 ```sh
-$ echo <in> | <cmd> > <out> # except you replace <in>, <out> & <cmd>
-                            # with actual values
+$ cat <in> | <cmd> > <out> # except you replace <in>, <out> & <cmd>
+                            # with actual file names
 ```
 
 Every time `<in>` changes.

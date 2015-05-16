@@ -9,7 +9,7 @@ var duplexer = require('duplexer2');
 var argv = require('minimist')(process.argv.slice(2));
 
 var usage = 'Usage: wpipe <in> <out> <cmd>\n\n'
-          + 'Basically do `echo <in> | <cmd> > <out>` every\n'
+          + 'Basically do `cat <in> | <cmd> > <out>` every\n'
           + 'time <in> changes.';
 
 if (argv.help) {
