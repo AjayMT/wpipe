@@ -1,7 +1,7 @@
 
 {
   "name": "wpipe",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "watch files and execute commands",
   "dependencies": {
     "duplexer2": "0.0.2",

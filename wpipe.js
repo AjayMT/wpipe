@@ -28,7 +28,7 @@ function wpipe (inf, outf, c) {
   var files = {};
 
   files[inf] = outf;
-  wb(files, duplexer(c.stdin, c.stdout));
+  wb(files, duplexer(cp.stdin, cp.stdout));
 }
 
 module.exports = wpipe;
