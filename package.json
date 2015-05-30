@@ -1,12 +1,12 @@
 
 {
   "name": "wpipe",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "watch files and execute commands",
   "dependencies": {
     "duplexer2": "0.0.2",
     "minimist": "1.1.0",
-    "watchbuild": "0.1.0"
+    "watchbuild": "0.2.1"
   },
   "main": "wpipe.js",
   "bin": {

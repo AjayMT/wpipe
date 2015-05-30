@@ -24,11 +24,14 @@ var cmd = argv._[2];
 // wpipe: watch inf, and every time it changes, transform
 // its contents with cmd and write the result to outf
 function wpipe (inf, outf, c) {
-  var cp = spawn(c);
   var files = {};
 
   files[inf] = outf;
-  wb(files, duplexer(cp.stdin, cp.stdout));
+  wb(files, function () {
+    var cp = spawn(c);
+
+    return duplexer(cp.stdin, cp.stdout);
+  });
 }
 
 module.exports = wpipe;
